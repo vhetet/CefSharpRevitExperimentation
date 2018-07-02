@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+    <AddIn Type="Command">
+        <Assembly>c:\users\vincent\source\repos\CefSharpRevitExperimentation\CefSharpRevitExperimentation\bin\Debug\CefSharpRevitExperimentation.dll</Assembly>
+        <AddInId>239BD853-36E4-461f-9171-C5ACEDA4E721</AddInId>
+        <FullClassName>CefSharpRevitExperimentation.Class1</FullClassName>
+        <Text>CefSharpRevitExperimentation</Text> 
+        <VendorId>NAME</VendorId>
+        <VendorDescription>Your Company Information</VendorDescription> 
+    </AddIn>
+</RevitAddIns>
