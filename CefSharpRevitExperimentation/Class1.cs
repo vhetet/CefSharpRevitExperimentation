@@ -61,8 +61,8 @@ namespace CefSharpRevitExperimentation
             object sender,
             ViewActivatedEventArgs e)
         {
-            m_MyDockableWindow.lblProjectName.Content
-                = e.Document.ProjectInformation.Name;
+//            m_MyDockableWindow.lblProjectName.Content
+//                = e.Document.ProjectInformation.Name;
         }
     }
 }

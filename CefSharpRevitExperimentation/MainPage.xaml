@@ -4,34 +4,151 @@
              xmlns:dat="clr-namespace:System.Windows.Data;assembly=PresentationFramework"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:System="clr-namespace:System;assembly=mscorlib"
+             xmlns:wpf="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
+             xmlns:cef="clr-namespace:CefSharp;assembly=CefSharp.Core"
              Height="500" Width="200"
              x:Name="DockableDialogs"  Background="LightGray" Loaded="DockableDialogs_Loaded">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <!-- <RowDefinition></RowDefinition> -->
-        </Grid.RowDefinitions>
+    <!-- xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"  -->
 
+<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition />
+        <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="{x:Type Button}">
+                <Setter Property="Margin" Value="2,5" />
+            </Style>
+            <Style TargetType="{x:Type TextBox}">
+                <Setter Property="Margin" Value="2,5" />
+            </Style>
+        </Grid.Resources>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
 
-        <Label Grid.Row="0">Log</Label>
-
-        <StackPanel Grid.Row="0">
-            <Label Content="Label" Grid.Row="4" Height="26" HorizontalAlignment="Left" Margin="12,34,0,0" Name="lblProjectName" VerticalAlignment="Top" Width="176" />
-        </StackPanel>
-
-        <WebBrowser Name="web_browser" Grid.Row="1"></WebBrowser>
-
-        <!-- 
-    <TextBox Name="tb_output" Grid.Row="2" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible"></TextBox>
-    <Label Content="Project Name:" Grid.Row="3" Height="28" HorizontalAlignment="Left" Name="lblProjectNameHeading" VerticalAlignment="Top" Margin="0,6,0,0" />
-    <Label Content="Label" Grid.Row="4" Height="26" HorizontalAlignment="Left" Margin="12,34,0,0" Name="lblProjectName" VerticalAlignment="Top" Width="176" />
-     -->
-
     </Grid>
+    <Border Grid.Row="1" BorderBrush="Gray" BorderThickness="0,1">
+        <wpf:ChromiumWebBrowser x:Name="Browser"
+                                Address="www.google.com">
+            <!-- <i:Interaction.Behaviors> -->
+            <!--     <behaviours:HoverLinkBehaviour x:Name="HoverLinkBehaviour"/> -->
+            <!-- </i:Interaction.Behaviors> -->
+        </wpf:ChromiumWebBrowser>
+    </Border>
+</Grid>
 </UserControl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
