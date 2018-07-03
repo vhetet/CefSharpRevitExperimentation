@@ -28,13 +28,14 @@ namespace CefSharpRevitExperimentation
         private int m_right = 1;
         private int m_top = 1;
         private int m_bottom = 1;
-        const string _url_tbc = "http://thebuildingcoder.typepad.com";
-        const string _url_git = "https://github.com/jeremytammik/DockableDialog";
+        const string _url = "https://www.microsoft.com/";
+        const string _url_local = "localhost:8000";
         #endregion
 
         public MainPage()
         {
             InitializeComponent();
+
         }
 
         public void SetupDockablePane(Autodesk.Revit.UI.DockablePaneProviderData data)
@@ -71,7 +72,9 @@ namespace CefSharpRevitExperimentation
             object sender,
             RoutedEventArgs e)
         {
-
+            //            web_browser.Navigate(_url);
+            wvc.IsPrivateNetworkClientServerCapabilityEnabled = false;
+            wvc.Navigate(new Uri(_url_local));
         }
     }
 }

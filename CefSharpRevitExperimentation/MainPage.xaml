@@ -4,26 +4,15 @@
              xmlns:dat="clr-namespace:System.Windows.Data;assembly=PresentationFramework"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:System="clr-namespace:System;assembly=mscorlib"
-             Height="500" Width="200"
+             xmlns:WPF="clr-namespace:Microsoft.Toolkit.Win32.UI.Controls.WPF;assembly=Microsoft.Toolkit.Win32.UI.Controls"
+
+             Height="500" Width="500"
              x:Name="DockableDialogs"  Background="LightGray" Loaded="DockableDialogs_Loaded">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <!-- <RowDefinition></RowDefinition> -->
-        </Grid.RowDefinitions>
 
-        <Grid.ColumnDefinitions>
-        </Grid.ColumnDefinitions>
 
-        <Label Grid.Row="0">Log</Label>
-
-        <StackPanel Grid.Row="0">
-            <Label Content="Label" Grid.Row="4" Height="26" HorizontalAlignment="Left" Margin="12,34,0,0" Name="lblProjectName" VerticalAlignment="Top" Width="176" />
-        </StackPanel>
-
-        <WebBrowser Name="web_browser" Grid.Row="1"></WebBrowser>
-
+        <!-- <WebBrowser Name="web_browser" Grid.Row="0" Grid.RowSpan="2"></WebBrowser> -->
+        <WPF:WebView x:Name="wvc" />
         <!-- 
     <TextBox Name="tb_output" Grid.Row="2" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible"></TextBox>
     <Label Content="Project Name:" Grid.Row="3" Height="28" HorizontalAlignment="Left" Name="lblProjectNameHeading" VerticalAlignment="Top" Margin="0,6,0,0" />
@@ -32,6 +21,13 @@
 
     </Grid>
 </UserControl>
+
+
+
+
+
+
+
 
 
 

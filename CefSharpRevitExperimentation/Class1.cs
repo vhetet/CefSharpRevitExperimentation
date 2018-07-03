@@ -43,6 +43,7 @@ namespace CefSharpRevitExperimentation
             data.InitialState.TabBehind = DockablePanes
                 .BuiltInDockablePanes.ProjectBrowser;
 
+
             DockablePaneId dpid = new DockablePaneId(
                 new Guid("{D7C963CE-B7CA-426A-8D51-6E8254D21157}"));
 
@@ -61,8 +62,8 @@ namespace CefSharpRevitExperimentation
             object sender,
             ViewActivatedEventArgs e)
         {
-            m_MyDockableWindow.lblProjectName.Content
-                = e.Document.ProjectInformation.Name;
+//            m_MyDockableWindow.lblProjectName.Content
+//                = e.Document.ProjectInformation.Name;
         }
     }
 }
